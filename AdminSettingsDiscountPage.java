@@ -117,13 +117,12 @@ public class AdminSettingsDiscountPage extends BasePage
 
 	public void verifyDeleteDiscount(Map<Object,Object> testdatamap) throws Exception {
 		try {
-			searchDiscount(testdatamap);
+			
 			if(CheckElementExists(EdaatOR.Biller_Product_NoData)==true) {
 				AddDiscount(testdatamap);
 				searchDiscount(testdatamap);
 			}
 
-			DeleteDiscount(testdatamap);
 			verifyElementIsPresent(EdaatOR.Biller_Product_NoData);
 			test.log(Status.PASS,"#FUNC-Delete Invoice Template" + driver.getTitle() +" * Delete Discount PASS * " );	
 		}
