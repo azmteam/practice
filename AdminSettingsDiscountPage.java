@@ -132,4 +132,6 @@ public class AdminSettingsDiscountPage extends BasePage
 		}
 	}
 
+				searchDiscount(testdatamap);
+
 }
